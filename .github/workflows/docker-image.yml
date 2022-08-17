@@ -1,4 +1,4 @@
-name: Java CI
+name: Docker-image
 on: push
 env:
   docker_username: ${{ secrets.DOCKER_USERNAME }}
@@ -23,8 +23,8 @@ jobs:
       - name: download compiled code
         uses: actions/download-artifact@v2
         with:
-          name: compiled-code
-          path: app/build/libs/app-0.1-all.jar
+          name: code
+          path: .
       - name: Download code
         uses: actions/download-artifact@v2
         with:
