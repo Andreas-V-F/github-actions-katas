@@ -74,6 +74,6 @@ jobs:
         name: code
         path: .
     - name: build docker
-      run: sh ci/build-docker.sh
+      run: chmod +x ci/build-docker.sh && ci/build-docker.sh
     - name: push docker
-      run: sh ci/push-docker.sh
+      run: chmod +x ci/push-docker.sh && ci/push-docker.sh
